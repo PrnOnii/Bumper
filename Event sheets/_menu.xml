@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_menu</name>
+    <events>
+        <variable constant="0" name="NewRoom" sid="142828346667268" static="0" type="number">0</variable>
+        <variable constant="0" name="Unlock" sid="731433556721333" static="0" type="number">0</variable>
+        <variable constant="0" name="Col" sid="803066596403191" static="0" type="number">1</variable>
+        <variable constant="0" name="Line" sid="689001365777720" static="0" type="number">1</variable>
+        <variable constant="0" name="Mode" sid="406065323564704" static="0" type="text">mouse</variable>
+        <variable constant="0" name="Input" sid="285557484364974" static="0" type="number">0</variable>
+        <variable constant="0" name="Color" sid="319821452707969" static="0" type="text">Dark</variable>
+        <variable constant="0" name="Pseudo" sid="147836883071468" static="0" type="text"></variable>
+        <event-block sid="327934560074297">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="158266177993213" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="164955550858146" type="Mouse">
+                    <param id="0" name="Sprite">Cursor</param>
+                </action>
+                <action id="5" name="Check item exists" sid="394419934432982" type="LocalStorage">
+                    <param id="0" name="Key">&quot;pseudo&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="155211342688062" type="Text">
+                    <param id="0" name="Family name">&quot;Kenney Mini Square&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="813610584444106" type="System">
+                    <param id="0" name="Object to create">Logo</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="0" name="Play" sid="998711200770076" type="Audio">
+                    <param id="0" name="Audio file">intro</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="535949897386149" type="Text">
+                    <param id="0" name="Instance variable">InitialX</param>
+                    <param id="1" name="Value">Text.X</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="355376384498669" type="Text">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="345731121242457">
+            <conditions>
+                <condition id="9" name="On item exists" sid="740524419496824" type="LocalStorage">
+                    <param id="0" name="Key">&quot;pseudo&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="360073606852377" type="Text">
+                    <param id="0" name="Unique ID">35</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="801669469700690" type="Text">
+                    <param id="0" name="Text">LocalStorage.ItemValue</param>
+                </action>
+                <action id="101" name="Set my actor name" sid="179149011835060" type="Photon">
+                    <param id="0" name="name">Text.Text</param>
+                </action>
+                <action id="0" name="Set item" sid="859724055335262" type="LocalStorage">
+                    <param id="0" name="Key">&quot;pseudo&quot;</param>
+                    <param id="1" name="Value">Text.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="928395508553741">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="234558988086974" type="Logo" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="220805558666524" type="System">
+                    <param id="0" name="Variable">Unlock</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="442213799798126">
+            <conditions>
+                <condition id="0" name="On click" sid="525183766923152" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="646491525167687" type="System">
+                    <param id="0" name="First value">Unlock</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="226591673343897">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="416627521133475" type="Text">
+                            <param id="0" name="Unique ID">33</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="992174583382455" type="Mouse">
+                            <param id="0" name="Object">Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="692917320432161" type="CameraMenuPos">
+                            <param id="0" name="Y">CameraMenuPos.Y+720</param>
+                        </action>
+                        <action id="0" name="Play" sid="488386606469760" type="Audio">
+                            <param id="0" name="Audio file">click1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="439205333918134">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="299693398305345" type="Text">
+                            <param id="0" name="Unique ID">54</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="166200418726666" type="Mouse">
+                            <param id="0" name="Object">Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="801233970503905" type="CameraMenuPos">
+                            <param id="0" name="Y">CameraMenuPos.Y-720</param>
+                        </action>
+                        <action id="0" name="Play" sid="580575471497163" type="Audio">
+                            <param id="0" name="Audio file">click1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="135420122710624">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="921436908526942" type="Text">
+                            <param id="0" name="Unique ID">53</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="873858892623092" type="Mouse">
+                            <param id="0" name="Object">Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="624769439546596" type="Audio">
+                            <param id="0" name="Audio file">click1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="157515973589492" type="System">
+                            <param id="0" name="Variable">NewRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Prepare Transition" sid="924894077715382" type="LayoutTransitionV2" />
+                        <action id="-16" name="Wait" sid="499533974934480" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="1" name="Start Transition" sid="236018164297325" type="LayoutTransitionV2">
+                            <param id="0" name="Transition Name">11</param>
+                        </action>
+                        <action id="-43" name="Go to next/previous layout" sid="572998846042528" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="855054278510683">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="643733146545225" type="Text">
+                            <param id="0" name="Unique ID">52</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="298122929341259" type="Mouse">
+                            <param id="0" name="Object">Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Prepare Transition" sid="168722664707593" type="LayoutTransitionV2" />
+                        <action id="-16" name="Wait" sid="996001836464600" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="1" name="Start Transition" sid="553462056191065" type="LayoutTransitionV2">
+                            <param id="0" name="Transition Name">11</param>
+                        </action>
+                        <action id="-43" name="Go to next/previous layout" sid="838523476790707" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="709643187317890">
+                    <conditions>
+                        <condition id="3" name="Is button down" sid="935327804561101" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-43" name="Go to next/previous layout" sid="653639569682065" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="834007046965987">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="156606205412456" type="Mouse">
+                    <param id="0" name="Object">ButtonSprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="514983908644225" type="ButtonSprite">
+                    <param id="0" name="Animation">&quot;Hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="495224405589098">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="828214673029671" type="Mouse">
+                    <param id="0" name="Object">ButtonSprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="774803700463715" type="ButtonSprite">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="487295830001556">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="968855750441897" type="Mouse">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="462167489435992" type="Player">
+                    <param id="0" name="Scale">1.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="343211457567797">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="652405733189063" type="Mouse">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="614618287707634" type="Player">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="975954535193342">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="146218056499364" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="701631296877828" type="System">
+                    <param id="0" name="Variable">Color</param>
+                    <param id="1" name="Value">Player.AnimationName</param>
+                </action>
+                <action id="-3" name="Set position" sid="966773361190866" type="Sprite2">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+                <action id="0" name="Play" sid="851983502020154" type="Audio">
+                    <param id="0" name="Audio file">click1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327350180274238">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="637629443143297" type="System">
+                    <param id="0" name="Variable">Input</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="920908394494285">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="613649810820508" type="Keyboard" />
+                        <condition id="-8" name="Compare two values" sid="354557024783695" type="System">
+                            <param id="0" name="First value">Keyboard.LastKeyCode</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">90</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="638413966799357" type="System">
+                            <param id="0" name="First value">Keyboard.LastKeyCode</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">65</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="136916775412390" type="Text">
+                            <param id="0" name="Unique ID">35</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="750697164602685" type="System">
+                            <param id="0" name="First value">len(Text.Text)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="537525921997410" type="Text">
+                            <param id="0" name="Text">Keyboard.StringFromKeyCode(Keyboard.LastKeyCode)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993006096418053">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="966493458706992" type="Keyboard">
+                            <param id="0" name="Key">8 (Backspace)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="976356363040338" type="Text">
+                            <param id="0" name="Unique ID">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="697243548436161" type="Text">
+                            <param id="0" name="Text">left(Text.text, (len(Text.text))-1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="161725564129844">
+            <conditions>
+                <condition id="0" name="On click" sid="386980440794043" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="756044393992882">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="146310745549835" type="Mouse">
+                            <param id="0" name="Object">Input</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="670283437989637" type="Text">
+                            <param id="0" name="Unique ID">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="830975763721558" type="System">
+                            <param id="0" name="Variable">Input</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Flash" id="1" name="Stop flashing" sid="211264185394801" type="BlinkingCursor" />
+                        <action id="101" name="Set my actor name" sid="475904377584122" type="Photon">
+                            <param id="0" name="name">Text.Text</param>
+                        </action>
+                        <action id="0" name="Set item" sid="696643492261708" type="LocalStorage">
+                            <param id="0" name="Key">&quot;pseudo&quot;</param>
+                            <param id="1" name="Value">Text.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="610335474748144">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="831971315729017" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="560146186838247" type="System">
+                            <param id="0" name="Variable">Input</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="841472871382003" type="BlinkingCursor">
+                            <param id="0" name="&apos;On&apos; time">0.5</param>
+                            <param id="1" name="&apos;Off&apos; time">0.5</param>
+                            <param id="2" name="Duration">99999</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="563779567759402">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="786732989938459" type="Text">
+                                    <param id="0" name="Unique ID">35</param>
+                                </condition>
+                                <condition id="0" name="Compare text" sid="742417038689791" type="Text">
+                                    <param id="0" name="Text to compare">&quot;Pseudo&quot;</param>
+                                    <param id="1" name="Case sensitivity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="206992202150125" type="Text">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="912016171630312">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="923848415730469" type="Mouse">
+                            <param id="0" name="Object">Text</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="104939182793252" type="Text">
+                            <param id="0" name="Unique ID">19</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="710740382841320" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="802241220114972">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="758508859410944" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="387484080028997" type="Audio">
+                    <param id="0" name="Audio file">click1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-1" name="Set X" sid="706615213652054" type="Sprite2">
+                    <param id="0" name="X">Sprite2.X+64</param>
+                </action>
+                <action id="-10" name="Add to" sid="442337519786858" type="System">
+                    <param id="0" name="Variable">Col</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="558801023634858">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="764978704755111" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="368989993182795" type="Audio">
+                    <param id="0" name="Audio file">click1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-1" name="Set X" sid="451919891707242" type="Sprite2">
+                    <param id="0" name="X">Sprite2.X-64</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="517581035901091" type="System">
+                    <param id="0" name="Variable">Col</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="873458307198560">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="386124747352832" type="Sprite2">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="-1" name="Every tick" sid="733967662290333" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="314236532634127" type="System">
+                    <param id="0" name="Variable">Color</param>
+                    <param id="1" name="Value">Player.AnimationName</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="962973568691624">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="970639739032217" type="System">
+                    <param id="0" name="Variable">Col</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="914716203675946" type="Sprite2">
+                    <param id="0" name="X">480</param>
+                </action>
+                <action id="-9" name="Set value" sid="828363512653338" type="System">
+                    <param id="0" name="Variable">Col</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="354305855952530">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="379715555336904" type="System">
+                    <param id="0" name="Variable">Col</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="474600923259660" type="Sprite2">
+                    <param id="0" name="X">800</param>
+                </action>
+                <action id="-9" name="Set value" sid="449410575464484" type="System">
+                    <param id="0" name="Variable">Col</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="921045829433308">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="777125103576812" type="Mouse">
+                    <param id="0" name="Object">Text</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="526626625534197" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="998231076407291" type="Audio">
+                    <param id="0" name="Audio file">tap-mellow</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-1" name="Set X" sid="176810128944479" type="MoveTo">
+                    <param id="0" name="X">Text.X+20</param>
+                </action>
+                <action id="-10" name="Set value" sid="423943196703912" type="MoveTo">
+                    <param id="0" name="Instance variable">TextUID</param>
+                    <param id="1" name="Value">Text.UID</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="489758989453863" type="Text">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="203930878772125">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="359394678275270" type="Mouse">
+                    <param id="0" name="Object">Text</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="383079855352370" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="118100189847065" type="MoveTo">
+                    <param id="0" name="Instance variable">TextUID</param>
+                    <param id="1" name="Value">-99</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="249442026965265" type="Text">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="704830469231682">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="721435509147926" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="155888508021949" type="Text">
+                    <param id="0" name="Unique ID">MoveTo.TextUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="555098590352936" type="Text">
+                    <param id="0" name="X">lerp(Text.X, MoveTo.X, 0.1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="892667823594403">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="113202065485696" type="System" />
+                <condition id="-14" inverted="1" name="Pick by unique ID" sid="900259605754860" type="Text">
+                    <param id="0" name="Unique ID">MoveTo.TextUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="129075208088824" type="Text">
+                    <param id="0" name="X">lerp(Text.X, Text.InitialX, 0.1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="412791660393269">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="394718089400330" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="170191137476456" type="Camera">
+                    <param id="0" name="X">lerp(Camera.X, CameraMenuPos.X, 0.1)</param>
+                    <param id="1" name="Y">lerp(Camera.Y, CameraMenuPos.Y, 0.1)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

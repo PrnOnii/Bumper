@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_animations</name>
+    <events>
+        <event-block sid="135748883529593">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="206635077181578" type="Player">
+                    <param id="0" name="Instance variable">ActorNr</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Photon.MyActorNr</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="687322349143082">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="740421419303716" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="193704590914966" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="235673011538030" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="17" name="Raise event" sid="368314271801245" type="Photon">
+                            <param id="0" name="Code">60</param>
+                            <param id="1" name="Data">0</param>
+                            <param id="2" name="InterestGroup">0</param>
+                            <param id="3" name="Cache">0</param>
+                            <param id="4" name="Receivers">0</param>
+                            <param id="5" name="TargetActors">&quot;&quot;</param>
+                            <param id="6" name="WebForward">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="230047854631930">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="958296772473660" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="486790824347666" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="105500194139682" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="17" name="Raise event" sid="973810039033337" type="Photon">
+                            <param id="0" name="Code">61</param>
+                            <param id="1" name="Data">0</param>
+                            <param id="2" name="InterestGroup">0</param>
+                            <param id="3" name="Cache">0</param>
+                            <param id="4" name="Receivers">0</param>
+                            <param id="5" name="TargetActors">&quot;&quot;</param>
+                            <param id="6" name="WebForward">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="886275544326781">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="523859828731777" type="Player" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="122548458474949" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="411020929068581" type="Player">
+                            <param id="0" name="Animation">Color &amp; &quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="17" name="Raise event" sid="404187689361758" type="Photon">
+                            <param id="0" name="Code">62</param>
+                            <param id="1" name="Data">0</param>
+                            <param id="2" name="InterestGroup">0</param>
+                            <param id="3" name="Cache">0</param>
+                            <param id="4" name="Receivers">0</param>
+                            <param id="5" name="TargetActors">&quot;&quot;</param>
+                            <param id="6" name="WebForward">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="958529703982113">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="526732894492410" type="Player" />
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="881507808763874" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="393219122788017" type="Player">
+                            <param id="0" name="Animation">Color</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="17" name="Raise event" sid="361681120352984" type="Photon">
+                            <param id="0" name="Code">63</param>
+                            <param id="1" name="Data">0</param>
+                            <param id="2" name="InterestGroup">0</param>
+                            <param id="3" name="Cache">0</param>
+                            <param id="4" name="Receivers">0</param>
+                            <param id="5" name="TargetActors">&quot;&quot;</param>
+                            <param id="6" name="WebForward">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="802616897703740">
+                    <conditions>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="874168779655291" type="Player" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="714537124586885" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="179596984922999" type="Player" />
+                        <action id="17" name="Raise event" sid="725582715134850" type="Photon">
+                            <param id="0" name="Code">64</param>
+                            <param id="1" name="Data">0</param>
+                            <param id="2" name="InterestGroup">0</param>
+                            <param id="3" name="Cache">0</param>
+                            <param id="4" name="Receivers">0</param>
+                            <param id="5" name="TargetActors">&quot;&quot;</param>
+                            <param id="6" name="WebForward">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="701852472161837">
+            <conditions>
+                <condition id="3" name="On event" sid="210431778922609" type="Photon">
+                    <param id="0" name="Code">60</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="801038576465682" type="Player">
+                    <param id="0" name="Instance variable">ActorNr</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Photon.ActorNr</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="167340082194947" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="886113440684906">
+            <conditions>
+                <condition id="3" name="On event" sid="130178003106162" type="Photon">
+                    <param id="0" name="Code">61</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="484805398048221" type="Player">
+                    <param id="0" name="Instance variable">ActorNr</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Photon.ActorNr</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="146561185106870" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="557148701503276">
+            <conditions>
+                <condition id="3" name="On event" sid="587479050192636" type="Photon">
+                    <param id="0" name="Code">62</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="860331535003740" type="Player">
+                    <param id="0" name="Instance variable">ActorNr</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Photon.ActorNr</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="191647186465046" type="Player">
+                    <param id="0" name="Animation">Player.Color &amp; &quot;Walking&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="577483490329563">
+            <conditions>
+                <condition id="3" name="On event" sid="390200352536336" type="Photon">
+                    <param id="0" name="Code">63</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="292595942610555" type="Player">
+                    <param id="0" name="Instance variable">ActorNr</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Photon.ActorNr</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="562464686276167" type="Player">
+                    <param id="0" name="Animation">Player.Color</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="575313452768024">
+            <conditions>
+                <condition id="3" name="On event" sid="546006999300469" type="Photon">
+                    <param id="0" name="Code">64</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="120141415383119" type="Player">
+                    <param id="0" name="Instance variable">ActorNr</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Photon.ActorNr</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="760907348672753" type="Player" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
