@@ -251,5 +251,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="281396076955991">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="719852110231897" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="442250691613644" type="Bar">
+                    <param id="0" name="Width">(TimeSinceLastJump*100)/3</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

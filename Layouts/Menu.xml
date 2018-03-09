@@ -569,7 +569,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>517.393188477</y>
+                        <y>640</y>
                         <z>0</z>
                         <width>224</width>
                         <height>36.05090332</height>
@@ -582,7 +582,7 @@
                 </instance>
                 <instance type="Text" uid="46">
                     <properties>
-                        <text>Alpha 0.4</text>
+                        <text>Alpha 0.5</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-11,400,0</font>
                         <color>255,255,255</color>
@@ -816,14 +816,14 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="7">
+                <instance type="Text" uid="13">
                     <properties>
-                        <text>Todo : Lives, join a friend, better map, all colors</text>
+                        <text>Changelog</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-26.4,400,0</font>
+                        <font>Arial,-27,400,0</font>
                         <color>255,255,255</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -844,11 +844,171 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1920</x>
-                        <y>360</y>
+                        <x>160</x>
+                        <y>576</y>
                         <z>0</z>
-                        <width>600</width>
-                        <height>300</height>
+                        <width>224</width>
+                        <height>36.05090332</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text" uid="20">
+                    <properties>
+                        <text>Back</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-26.4,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <ActorNr>-99</ActorNr>
+                        <ConnectOrder>-99</ConnectOrder>
+                        <InitialX>-99</InitialX>
+                        <Type></Type>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="BlurVertical">
+                            <parameters>
+                                <intensity>0.45</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1376</x>
+                        <y>64</y>
+                        <z>0</z>
+                        <width>320</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text" uid="7">
+                    <properties>
+                        <text>New anti camp system</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-26.4,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <ActorNr>-99</ActorNr>
+                        <ConnectOrder>-99</ConnectOrder>
+                        <InitialX>-99</InitialX>
+                        <Type></Type>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="BlurVertical">
+                            <parameters>
+                                <intensity>0</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1888</x>
+                        <y>192</y>
+                        <z>0</z>
+                        <width>320</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text" uid="60">
+                    <properties>
+                        <text>Changelog menu</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-26.4,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <ActorNr>-99</ActorNr>
+                        <ConnectOrder>-99</ConnectOrder>
+                        <InitialX>-99</InitialX>
+                        <Type></Type>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="BlurVertical">
+                            <parameters>
+                                <intensity>0</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1888</x>
+                        <y>288</y>
+                        <z>0</z>
+                        <width>320</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text" uid="61">
+                    <properties>
+                        <text>Transitions</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-26.4,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <ActorNr>-99</ActorNr>
+                        <ConnectOrder>-99</ConnectOrder>
+                        <InitialX>-99</InitialX>
+                        <Type></Type>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="BlurVertical">
+                            <parameters>
+                                <intensity>0</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1888</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>320</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -934,7 +1094,7 @@
                     <properties>
                         <text>Play</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
+                        <font>Arial,-34.4,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -959,10 +1119,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>468.78012085</y>
+                        <y>493.97454834</y>
                         <z>0</z>
                         <width>224</width>
-                        <height>36.05090332</height>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
