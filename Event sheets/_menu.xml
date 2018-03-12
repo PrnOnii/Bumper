@@ -530,7 +530,7 @@
             </conditions>
             <actions>
                 <action id="-1" name="Set X" sid="914716203675946" type="Sprite2">
-                    <param id="0" name="X">480</param>
+                    <param id="0" name="X">448</param>
                 </action>
                 <action id="-9" name="Set value" sid="828363512653338" type="System">
                     <param id="0" name="Variable">Col</param>
@@ -548,11 +548,11 @@
             </conditions>
             <actions>
                 <action id="-1" name="Set X" sid="474600923259660" type="Sprite2">
-                    <param id="0" name="X">800</param>
+                    <param id="0" name="X">832</param>
                 </action>
                 <action id="-9" name="Set value" sid="449410575464484" type="System">
                     <param id="0" name="Variable">Col</param>
-                    <param id="1" name="Value">6</param>
+                    <param id="1" name="Value">7</param>
                 </action>
             </actions>
         </event-block>
