@@ -257,7 +257,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="442250691613644" type="Bar">
-                    <param id="0" name="Width">(TimeSinceLastJump*100)/3</param>
+                    <param id="0" name="Width">lerp(Bar.Width+1, (TimeSinceLastJump*100)/3, 0.2)</param>
                 </action>
             </actions>
         </event-block>
