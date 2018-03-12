@@ -137,6 +137,48 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="782731410042748">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="280399113639842" type="Text">
+                            <param id="0" name="Unique ID">13</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="462817044216933" type="Mouse">
+                            <param id="0" name="Object">Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="215457656554096" type="CameraMenuPos">
+                            <param id="0" name="X">CameraMenuPos.X+1280</param>
+                        </action>
+                        <action id="0" name="Play" sid="227958567063651" type="Audio">
+                            <param id="0" name="Audio file">click1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="452901820297238">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="516284585469333" type="Text">
+                            <param id="0" name="Unique ID">20</param>
+                        </condition>
+                        <condition id="7" name="Cursor is over object" sid="925579558764212" type="Mouse">
+                            <param id="0" name="Object">Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="749252355388969" type="CameraMenuPos">
+                            <param id="0" name="X">CameraMenuPos.X-1280</param>
+                        </action>
+                        <action id="0" name="Play" sid="304617043387625" type="Audio">
+                            <param id="0" name="Audio file">click1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="135420122710624">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="921436908526942" type="Text">
